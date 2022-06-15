@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+header .util .edit,
+header .util .login {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  min-width: 200px;
+}
+
+header .side .m_menu {
+  display: none;
+}
+
+header .side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .side .nav {
+  display: flex;
+}
+
+header .side .nav li {
+  width: 114px;
+  margin: 0 0.625rem;
+}
+
+header .side .nav li a {
+  height: 100%;
+  line-height: 120px;
+}
+
+.grid_container {
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 260px;
+}
+
+.grid_container .mobile_none {
+  display: block;
+}
+
+.grid_container .item1 {
+  grid-column: span 3;
+}
+
+.grid_container .item2 {
+  grid-column: span 1;
+  background: #fff;
+  color: #000;
+}
+
+.grid_container .item2::after {
+  display: none;
+}
+
+.grid_container .item2 p {
+  color: #555;
+}
+
+.grid_container .item3 {
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+}
+
+.grid_container .item3::after {
+  content: "\e986";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12rem;
+  height: 12rem;
+  background: url(../images/settings.svg) no-repeat 50% / cover;
+  opacity: 0.3;
+  animation: rotate 3s infinite linear;
+}
+
+.grid_container .item6,
+.grid_container .item7,
+.grid_container .item10 {
+  grid-column: span 2;
+}

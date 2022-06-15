@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+header {
+  position: static;
+}
+
+header .util,
+.grid_container {
+  margin: 0 0 0 250px;
+  width: calc(100% - 250px);
+}
+
+header .util a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0.625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+header .util a:hover::after {
+  /* left: 0; */
+  width: 80%;
+}
+
+
+header .side {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2.1875rem 1.25rem;
+  width: 250px;
+  height: 100vh;
+  background-color: #222;
+}
+
+header .side .head_container {
+  width: 100%;
+  height: auto;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+header .side .head_container .brand {
+  display: block;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+header .side .head_container h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+header .side .nav {
+  flex-direction: column;
+  width: 100%;
+}
+
+header .side .nav li {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px dotted #fff;
+}
+
+header .side .nav li:hover::after{
+  width: 100%;
+}
+
+header .side .nav li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+header .side .nav li a {
+  line-height: 60px;
+  transition: 1s;
+  z-index: 99;
+}
+
+header .side .nav li a::after {
+  left: 1.25rem;
+}
+
+header .side .nav li:hover a {
+  color: #000;
+  transition: 0.5s;
+}
+
+header .side .nav li:nth-child(1):hover a::after {
+  background-image: url(../images/home-bk.svg);
+}
+
+header .side .nav li:nth-child(2):hover a::after {
+  background-image: url(../images/event_note-bk.svg);
+}
+
+header .side .nav li:nth-child(3):hover a::after {
+  background-image: url(../images/ads-bk.svg);
+}
+
+header .side .nav li:nth-child(4):hover a::after {
+  background-image: url(../images/storefront-bk.svg);
+}
+
+header .side .etc {
+  display: block;
+}
+
+header .side .etc a {
+  transition: 0.3s;
+}
+
+header .side .etc a:hover {
+  color: #fff;
+}
+
+.grid_container {
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 300px;
+}
+
+.grid_container .item2,
+.grid_container .item9 {
+  grid-column: span 2;
+}
+
+.grid_container .item7,
+.grid_container .item10 {
+  grid-column: span 1;
+}
