@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #ededed;
+    font-family: 'Archivo',-apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blind {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    text-indent: -9999px;
+}
+
+.block {
+    display: block;
+}
+
+/* lines */
+.bg_line {
+    position: relative;
+}
+
+.bg_line .line {
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 1px;
+    height: 100vh;
+    background-color: #d7d7d7;
+    z-index: -9;
+}
+
+.bg_line .line1 {
+    display: none;
+    left: 25%;
+}
+
+.bg_line .line2 {
+    left: 50%;
+}
+
+.bg_line .line3 {
+    display: none;
+    left: 75%;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2.4rem;
+    transition: 1s;
+}
+
+header h1 a {
+    display: block;
+    width: 110px;
+    height: 27px;
+    background: url(../images/logo.png) no-repeat 50% / cover;
+}
+
+header .menu {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    /* background-color: rgba(0,0,0,0.3); */
+}
+
+header .menu::before,
+header .menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+header .menu::before {
+    top: 1rem;
+}
+
+header .menu::after {
+    bottom: 1rem;
+}
+
+/* main title */
+.main_title,
+.main_title > span,
+.main_title h2,
+.main_title p {
+    transition: 0.5s;
+}
+.main_title {
+    margin: 5rem 2.4rem;
+}
+
+.main_title > span {
+    font-size: 1.2rem;
+}
+
+.main_title h2 {
+    margin: 4rem 0;
+    font-size: 4.7rem;
+    font-weight: 700;
+}
+
+.main_title p {
+    width: 70%;
+    font-size: 1.6rem;
+    line-height: 3.6rem;
+    color: #767676;
+}
+
+/* grid */
+.grid_container {
+    margin-top: 10rem;
+    display: grid;
+    grid-template: repeat(28, 54vw) / 1fr;
+    
+}
+
+@media screen and (min-width:568px) {
+    .main_title h2 .block {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width:590px) {
+    .main_title h2 {
+        font-size: 7.6rem;
+    }
+}
