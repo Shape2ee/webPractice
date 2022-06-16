@@ -4,5 +4,5 @@
 
 ## 연습
 
-1. 그리드를 이용한 반응형 웹: [Grid Responsive Web Site](https://shape2ee.github.io/webPractice/Grid_Web/index.html)
-
+- 그리드를 이용한 반응형 웹 : [Grid Responsive Web Site](https://shape2ee.github.io/webPractice/Grid_Web/index.html)
+- DE-SSION Clone Coding : [DE-SSION](https://shape2ee.github.io/webPractice/DE-SSION/index.html)

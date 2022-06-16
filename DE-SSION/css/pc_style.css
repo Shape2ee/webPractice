@@ -18,3 +18,12 @@ header {
 .main_title p {
     left: 41.667vw;
 }
+
+/* grid */
+.grid_container .grid_item img {
+    transition: 1s;
+}
+
+.grid_container .grid_item:hover img {
+    transform: scale(1.2);
+}

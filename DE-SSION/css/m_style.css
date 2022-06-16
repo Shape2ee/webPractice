@@ -132,7 +132,11 @@ header .menu::after {
     margin-top: 10rem;
     display: grid;
     grid-template: repeat(28, 54vw) / 1fr;
-    
+}
+
+.grid_container .grid_item {
+    overflow: hidden;
+    transition: 1s;
 }
 
 @media screen and (min-width:568px) {
