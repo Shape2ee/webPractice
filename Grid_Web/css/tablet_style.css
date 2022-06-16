@@ -6,35 +6,34 @@
   }
 }
 
-
-header .util .edit,
-header .util .login {
+.utill .edit,
+.utill .login {
   display: flex;
   justify-content: space-between;
   width: 20%;
   min-width: 200px;
 }
 
-header .side .m_menu {
+header .m_menu {
   display: none;
 }
 
-header .side {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header .side .nav {
+header .nav {
   display: flex;
 }
 
-header .side .nav li {
+header .nav li {
   width: 114px;
   margin: 0 0.625rem;
 }
 
-header .side .nav li a {
+header .nav li a {
   height: 100%;
   line-height: 120px;
 }

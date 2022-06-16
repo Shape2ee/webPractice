@@ -1,16 +1,12 @@
 @charset "utf-8";
 
-header {
-  position: static;
-}
-
-header .util,
+.utill,
 .grid_container {
-  margin: 0 0 0 250px;
+  margin-left: 250px;
   width: calc(100% - 250px);
 }
 
-header .util a::after {
+.utill a::after {
   content: "";
   display: block;
   position: absolute;
@@ -23,12 +19,11 @@ header .util a::after {
   transition: 0.5s;
 }
 
-header .util a:hover::after {
+.utill a:hover::after {
   width: 80%;
 }
 
-
-header .side {
+header {
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -39,37 +34,37 @@ header .side {
   background-color: #222;
 }
 
-header .side .head_container {
+header .head_container {
   width: 100%;
   height: auto;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-header .side .head_container .brand {
+header .head_container .brand {
   display: block;
   font-size: 0.75rem;
   color: #fff;
 }
 
-header .side .head_container h1 {
+header .head_container h1 {
   margin: 0;
   font-size: 4rem;
 }
 
-header .side .nav {
+header .nav {
   flex-direction: column;
   width: 100%;
 }
 
-header .side .nav li {
+header .nav li {
   position: relative;
   margin: 0;
   width: 100%;
   border-bottom: 1px dotted #fff;
 }
 
-header .side .nav li::after {
+header .nav li::after {
   content: "";
   display: block;
   position: absolute;
@@ -81,48 +76,48 @@ header .side .nav li::after {
   transition: 0.3s;
 }
 
-header .side .nav li:hover::after{
+header .nav li:hover::after{
   width: 100%;
 }
 
-header .side .nav li a {
+header .nav li a {
   line-height: 60px;
   z-index: 99;
 }
 
-header .side .nav li a::after {
+header .nav li a::after {
   left: 1.25rem;
 }
 
-header .side .nav li:hover a {
+header .nav li:hover a {
   color: #000;
 }
 
-header .side .nav li:nth-child(1):hover a::after {
+header .nav li:nth-child(1):hover a::after {
   background-image: url(../images/home-bk.svg);
 }
 
-header .side .nav li:nth-child(2):hover a::after {
+header .nav li:nth-child(2):hover a::after {
   background-image: url(../images/event_note-bk.svg);
 }
 
-header .side .nav li:nth-child(3):hover a::after {
+header .nav li:nth-child(3):hover a::after {
   background-image: url(../images/ads-bk.svg);
 }
 
-header .side .nav li:nth-child(4):hover a::after {
+header .nav li:nth-child(4):hover a::after {
   background-image: url(../images/storefront-bk.svg);
 }
 
-header .side .etc {
+header .etc {
   display: block;
 }
 
-header .side .etc a {
+header .etc a {
   transition: 0.3s;
 }
 
-header .side .etc a:hover {
+header .etc a:hover {
   color: #fff;
 }
 

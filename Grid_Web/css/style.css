@@ -40,23 +40,23 @@ img {
   text-indent: -9999px;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
-header .util {
+.utill {
   display: flex;
   justify-content: space-between;
+  height: 60px;
   background-color: #000;
   border-bottom: 1px solid #fff;
   text-transform: uppercase;
   text-align: center;
+  order: 1;
 }
 
-header .util a {
+.utill a {
   overflow: hidden;
   display: block;
   position: relative;
@@ -67,22 +67,27 @@ header .util a {
   transition: 1s;
 }
 
-header .util .edit,
-header .util .login {
+.utill .edit,
+.utill .login {
   display: flex;
   justify-content: space-between;
   width: 50%;
 }
 
-header .side {
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
   overflow: hidden;
   padding: 0 1.25rem;
   height: 120px;
   background-color: #000;
   text-align: center;
+  order: 2;
 }
 
-header .side .head_container {
+header .head_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +96,7 @@ header .side .head_container {
   text-align: start;
 }
 
-header .side .head_container h1 {
+header .head_container h1 {
   margin: 1.25rem 0 0 0;
   font-family: "Black Han Sans","Noto Sans KR", "Helvetica Neue", "Apple SD Gothic Neo", 나눔고딕,
   NanumGothic, "맑은 고딕", "Malgun Gothic", 돋움, Dotum, sans-serif;
@@ -101,18 +106,22 @@ header .side .head_container h1 {
   line-height: 1;
 }
 
-header .side .head_container .brand {
+header .head_container h1 a {
+  color: inherit;
+}
+
+header .head_container .brand {
   display: none;
 }
 
-header .side .head_container .m_menu {
+header .head_container .m_menu {
   position: relative;
   width: 48px;
   height: 48px;
   color: #fff;
 }
 
-header .side .head_container .m_menu::after {
+header .head_container .m_menu::after {
   content: "";
   position: absolute;
   top: 0;
@@ -122,18 +131,18 @@ header .side .head_container .m_menu::after {
   background: url(../images/more_vert.svg) no-repeat;
 }
 
-header .side .nav {
+header .nav {
   display: none;
   color: #fff;
 }
 
-header .side .nav li a {
+header .nav li a {
   position: relative;
   display: block;
   color: inherit;
 }
 
-header .side .nav li a::after {
+header .nav li a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -144,19 +153,19 @@ header .side .nav li a::after {
   background: no-repeat 50% 50% / cover;
 }
 
-header .side .nav li:nth-child(1) a::after {
+header .nav li:nth-child(1) a::after {
   background-image: url(../images/home-wh.svg);
 }
 
-header .side .nav li:nth-child(2) a::after {
+header .nav li:nth-child(2) a::after {
   background-image: url(../images/event_note-wh.svg);
 }
 
-header .side .nav li:nth-child(3) a::after {
+header .nav li:nth-child(3) a::after {
   background-image: url(../images/ads-wh.svg);
 }
 
-header .side .nav li:nth-child(4) a::after {
+header .nav li:nth-child(4) a::after {
   background-image: url(../images/storefront-wh.svg);
 }
 
@@ -199,10 +208,10 @@ header .etc .sns {
 
 /* grid */
 .grid_container {
+  order: 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 220px;
-  margin-top: 180px;
 }
 
 .grid_container .mobile_none {
