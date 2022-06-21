@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+/* pc */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+}
+
+a {
+    color: inherit;
+}
+
+.block {
+    display: block;
+}
+
+
+/******* header *******/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+header h1 {
+    width: 92px;
+    height: 21px;
+}
+
+header h1 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo.png) no-repeat 50% / cover;
+    text-indent: -9999px;
+}
+
+/******* gnb *******/
+header .gnb {
+    display: flex;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+header .gnb a {
+    display: block;
+    padding: 3rem 1.6rem;
+}
+
+/******** mobile-menu *******/
+header .mobile-menu {
+    display: none;
+}
+
+/******* main ********/
+/******** promotion ********/
+.promotion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #eeeeee url(../images/hero-bg.png) no-repeat 50% / cover;
+}
+
+.promotion .txt-box {
+    margin-right: 11.905vw;
+}
+
+.promotion .txt-box p {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: rgba(0,0,0,0.5);
+}
+
+.promotion .txt-box h2 {
+    margin: 2rem 0 4rem;
+    font-size: 6rem;
+    font-family: 'Montserrat', 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    line-height: 9rem;
+}
+
+.promotion .txt-box i {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: #333;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.promotion .img-box {
+    width: 44.643vw;
+}
+
+.promotion .img-box .pagination {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: rgba(0,0,0,0.5);
+}
+.promotion .img-box .pagination li {
+    margin: 0 0.5rem;
+}
+.promotion .img-box .pagination li:first-child {
+    color: #000;
+}
+
+.promotion .img-box .pagination li:first-child:after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.5rem;
+    width: 26px;
+    height: 2px;
+    background-color: #000;
+    vertical-align: middle;
+}
+
+/******* introduce *******/
+.introduce {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 11rem auto;
+    width: 80%;
+    font-size: 1.6rem;
+}
+
+.introduce .introduce__txt {
+    padding: 4.5rem;
+    width: 50%;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+
+.introduce .introduce__txt:nth-child(even) {
+    border-right: none;
+}
+
+.introduce .introduce__txt:nth-child(2) ~ div {
+    border-bottom: none;
+}
+
+.introduce .introduce__txt h3{
+    margin-bottom: 3rem;
+    font-size: 3.2rem;
+    font-family: 'Montserrat', 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+.introduce .introduce__txt p {
+    color: #555;
+}
+
+/******* grid container *******/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 30%;
+}
+
+.grid .grid__item {
+    position: relative;
+}
+
+.grid .grid__item h3 {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7);
+    font-size: 3.2rem;
+    font-family: 'Montserrat', 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.grid .grid__item h3 a {
+    transform: translateY(-10px); 
+    transition: 0.3s ;
+}
+
+.grid .grid__item:hover h3 {
+    opacity: 1;
+}
+
+.grid .grid__item:hover h3 a {
+    transform: translateY(0);    
+}
+
+.grid .grid__item h3 a:hover {
+    color: #69a9c5;
+}
+
+.grid .grid__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 각각의 grid item 제어 */
+.grid .item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2 ;
+}
+
+.grid .item4 {
+    grid-column: 3 / span 2;
+}
+
+.grid .item7 {
+    grid-column: 3 / span 2;
+}
+
+/******* business *******/
+.business {
+    text-align: center;
+}
+
+.business h2 {
+    font-size: 5rem;
+    margin-bottom: 2.6rem;
+}
+
+.business h2::after {
+    content: "";
+    display: block;
+    margin: 3rem auto 0;
+    width: 3%;
+    height: 2px;
+    background-color: #000;
+}
+
+.business p {
+ font-size: 1.8rem;
+}
+
+.business .business-cont {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10rem auto 0;
+    width: 80%;
+}
+
+.business .business-cont__box {
+    margin: 0 1rem 5rem;
+    width: calc(50% - 2rem);
+    color: #555;
+}
+
+.business .business-cont__txt h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: 'Montserrat', 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: #000;
+}
+
+.business .business-cont__img {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.business .business-cont__arrow {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 0 0.4rem;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.business .business-cont__prev,
+.business .business-cont__next {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.business .business-cont__img:hover .business-cont__arrow {
+    opacity: 1;
+}
+
+/******* video ********/
+.video {
+    padding: 11rem;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.video .video__txt{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+}
+
+.video .video__txt h2 {
+    font-size: 5rem;
+    font-family: 'Montserrat', 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: #000;
+}
+
+.video .video__txt p {
+    width: 50%;
+    color: #555;
+    font-size: 1.6rem;
+}
+
+/******* contact *******/
+.contact {
+    position: relative;
+    padding: 11rem;
+    background: url(../images/img-bg.jpg) no-repeat 50% / cover;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    z-index: -9;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(105, 169, 197, 0.5);
+    z-index: -9;
+}
+
+.contact h2 {
+    font-size: 3.2rem;
+    font-family: 'Montserrat', 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+.contact a {
+    padding: 1rem;
+    border: 2px solid #fff;
+}
+
+/******* footer *******/
+footer {
+    padding: 4rem;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+footer p {
+    margin-bottom: 2rem;
+}
+
+footer .etc {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+footer .etc::after {
+    content: "/";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+footer .etc li {
+    margin: 0 2rem;
+}
+
+/******* kakao톡 상담 *******/
+.kakao-consult {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.kakao-consult a{
+    display: block;
+    width: 104px;
+    height: 48px;
+    background: url(../images/consult_small_mono_pc.png) no-repeat 50% / contain;
+    text-indent: -9999px;
+}
+
+/******* go to top *******/
+#goToTop {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 2px;
+    font-size: 1.6rem;
+    color: #fff;cursor: pointer;
+}
