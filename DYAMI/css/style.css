@@ -362,7 +362,8 @@ section > p {
 .service .service__container { 
     display: flex;
     justify-content: center;
-    margin: 10rem 0 8rem;
+    padding: 10rem 0 8rem;
+    overflow: hidden;
 }
 
 .service .service__container .service__box {
