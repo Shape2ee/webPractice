@@ -38,6 +38,15 @@ header {
     width: 100%;
     border-bottom: 1px solid rgba(0,0,0,0.3);
     z-index: 9999;
+    transition: 0.5s;
+}
+
+.header--white {
+    background-color: #fff;
+}
+
+.header--white .gnb a {
+    padding: 2rem 1.6rem;
 }
 
 header h1 {
@@ -63,6 +72,7 @@ header .gnb {
 header .gnb a {
     display: block;
     padding: 3rem 1.6rem;
+    transition: 0.5s;
 }
 
 /******** mobile-menu *******/
@@ -604,195 +614,4 @@ footer .etc li {
 
 #goToTop.gototop-show:hover {
     background-color: #000;
-}
-
-@media only screen and (max-width:1000px) {
-    /******* header *******/
-    header {
-        padding: 0 5rem ;
-        height: 6rem;
-        background-color: #fff;
-    }
-
-    header .gnb {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 0 5rem;
-        width: 100%;
-        flex-direction: column;
-        background-color: #fff;
-        display: none;
-    }
-
-    header .gnb a {
-        padding: 1.6rem;
-        border-bottom: 1px solid #ddd;
-    }
-
-    header .gnb li:last-child a {
-        border-bottom: none;
-    }
-
-    header .mobile-menu {
-        order: 2;
-        display: block;
-        font-size: 2.4rem;
-        cursor: pointer;
-    }
-    /******* main *******/
-    main {
-        margin-top: 6rem;
-    }
-    /******* promotion *******/
-    .promotion {
-        padding: 4rem 0;
-        flex-direction: column;
-        height: auto;
-    }
-
-    .promotion .txt-box {
-        width: 70%;
-    }
-
-    .promotion .img-box {
-        width: 70%;
-    }
-
-    /******* introduce *******/
-    .introduce {
-        flex-direction: column;
-    }
-    .introduce .introduce__txt {
-        width: 100%;
-        border-right: none;
-    }
-    .introduce .introduce__txt:nth-child(2) ~ div {
-        border-bottom: 1px solid #eee;
-    }
-    /******* grid *******/
-    .grid {
-        grid-template: repeat(3, 30vw) / repeat(3, 1fr);
-    }
-
-    .grid .item1 {
-        grid-column: 1 / span 1 ;
-        grid-row: 1 / span 1 ;
-    }
-
-    .grid .item4 {
-        grid-column: 1 / span 2 ;
-        grid-row: 2 / span 1 ;
-    }
-    .grid .item7 {
-        grid-column: 1 / span 2 ;
-        grid-row: 3 / span 1 ;
-    }
-    /*  */
-    .business {
-        margin: 5rem;
-    }
-
-    /*  */
-    .video {
-        padding: 5rem ;
-    }
-    
-    .video .video__txt {
-        flex-direction: column;
-    }
-
-    .video .video__txt p {
-        margin-top: 2rem;
-        width: 100%;
-    }
-
-    .service .service__container {
-        /* transform: translateX(-30%); */
-    }
-
-    .location {
-        margin: 5rem;
-    }
-
-    .location__container {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width:768px) {
-    html {
-        font-size: 55%;
-    }
-
-    body {
-        font-weight: 300;
-    }
-
-    .promotion .txt-box {
-        margin: 0;
-        text-align: center;
-    }
-
-    .promotion .txt-box i {
-        margin: 0 auto;
-    }
-
-    .promotion .img-box {
-        width: 95%;
-    }
-
-    .introduce .introduce__txt {
-        padding: 4.5rem 0;
-    }
-
-    .grid {
-        grid-template: 70vw / 1fr;
-        gap: 1rem 0;
-    }
-
-    .grid .item1 {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-    }
-
-    .grid .item4 {
-        grid-column: 1/ span 1;
-        grid-row: 4 / span 1;
-    }
-
-    .grid .item7 {
-        grid-column: 1 / span 1;
-        grid-row: 5 / span 1;
-    }
-
-    .business .business-cont {
-        margin: 5rem 0 0;
-        width: 100%;
-    }
-
-    .business .business-cont__box {
-        width: 100%;
-        margin: 0 0 5rem;
-    }
-
-    .service {
-        padding: 5rem 0 0;
-    }
-
-    .service .service__container .service__box {
-        width: 80%;
-    }
-
-    .location__container .location__tab {
-        font-size: 1.8rem;
-    }
-
-    .location__container .location__map-info ul li {
-        flex-direction: column;
-    }
-
-    .contact {
-        padding: 5rem;
-    }
 }

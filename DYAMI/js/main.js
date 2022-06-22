@@ -21,3 +21,17 @@ const moveTop = () => {
 
 window.addEventListener("scroll", scrollCheck);
 goToTop.addEventListener("click", moveTop)
+
+/***************************************/
+
+const header = document.querySelector("header")
+
+const bgChange = () => {
+    if(window.pageYOffset > 0) {
+        header.classList.add("header--white")
+    } else {
+        header.classList.remove("header--white")
+    }
+}
+
+window.addEventListener("scroll", bgChange)

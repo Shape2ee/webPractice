@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/******* header *******/
+header {
+    padding: 0 5rem;
+    height: 6rem;
+    background-color: #fff;
+}
+
+header .gnb {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0 5rem;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    display: none;
+}
+
+header .gnb a {
+    padding: 1.6rem;
+    border-bottom: 1px solid #ddd;
+}
+
+header .gnb li:last-child a {
+    border-bottom: none;
+}
+
+header .mobile-menu {
+    order: 2;
+    display: block;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+/******* main *******/
+main {
+    margin-top: 6rem;
+}
+
+/******* promotion *******/
+.promotion {
+    padding: 4rem 0;
+    flex-direction: column;
+    height: auto;
+}
+
+.promotion .txt-box {
+    width: 70%;
+}
+
+.promotion .img-box {
+    width: 70%;
+}
+
+/******* introduce *******/
+.introduce {
+    flex-direction: column;
+}
+
+.introduce .introduce__txt {
+    width: 100%;
+    border-right: none;
+}
+
+.introduce .introduce__txt:nth-child(2)~div {
+    border-bottom: 1px solid #eee;
+}
+
+/******* grid *******/
+.grid {
+    grid-template: repeat(3, 30vw) / repeat(3, 1fr);
+}
+
+.grid .item1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.grid .item4 {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+
+.grid .item7 {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+}
+
+/******* business *******/
+.business {
+    margin: 5rem;
+}
+
+/******* video *******/
+.video {
+    padding: 5rem;
+}
+
+.video .video__txt {
+    flex-direction: column;
+}
+
+.video .video__txt p {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/******* location *******/
+.location {
+    margin: 5rem;
+}
+
+.location__container {
+    width: 100%;
+}

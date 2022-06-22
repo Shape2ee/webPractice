@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+html {
+    font-size: 55%;
+}
+
+body {
+    font-weight: 300;
+}
+
+/******* promotion *******/
+.promotion .txt-box {
+    margin: 0;
+    text-align: center;
+}
+
+.promotion .txt-box i {
+    margin: 0 auto;
+}
+
+.promotion .img-box {
+    width: 95%;
+}
+
+/******* introduce *******/
+.introduce .introduce__txt {
+    padding: 4.5rem 0;
+}
+
+/******* grid *******/
+.grid {
+    grid-template: 70vw / 1fr;
+    gap: 1rem 0;
+}
+
+.grid .item1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.grid .item4 {
+    grid-column: 1/ span 1;
+    grid-row: 4 / span 1;
+}
+
+.grid .item7 {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+}
+
+/******* business *******/
+.business .business-cont {
+    margin: 5rem 0 0;
+    width: 100%;
+}
+
+.business .business-cont__box {
+    width: 100%;
+    margin: 0 0 5rem;
+}
+
+/******* service *******/
+.service {
+    padding: 5rem 0 0;
+}
+
+.service .service__container .service__box {
+    width: 80%;
+}
+
+/******* location *******/
+.location__container .location__tab {
+    font-size: 1.8rem;
+}
+
+.location__container .location__map-info ul li {
+    flex-direction: column;
+}
+
+/******* contact *******/
+.contact {
+    padding: 5rem;
+}
