@@ -72,7 +72,12 @@ header .gnb {
 header .gnb a {
     display: block;
     padding: 3rem 1.6rem;
-    transition: 0.5s;
+    transition: 0.3s;
+}
+
+header .gnb a:hover {
+    background-color: #69a9c5;
+    color: #fff;
 }
 
 /******** mobile-menu *******/
