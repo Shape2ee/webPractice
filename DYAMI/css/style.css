@@ -594,6 +594,16 @@ footer .etc li {
     border-radius: 2px;
     font-size: 1.6rem;
     color: #fff;cursor: pointer;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#goToTop.gototop-show {
+    opacity: 1;
+}
+
+#goToTop.gototop-show:hover {
+    background-color: #000;
 }
 
 @media only screen and (max-width:1000px) {
