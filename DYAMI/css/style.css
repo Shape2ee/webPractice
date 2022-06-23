@@ -43,9 +43,11 @@ header {
 
 .header--white {
     background-color: #fff;
+    border-bottom: none;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-.header--white .gnb a {
+.header--white .gnb .a-move {
     padding: 2rem 1.6rem;
 }
 
